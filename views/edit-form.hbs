@@ -1,0 +1,11 @@
+<form method="POST" action="/todo/{{todo._id}}/edit">
+  <div class="form-group">
+    <label for="todoName">Name</label>
+    <input value="{{todo.name}}" name="name" type="text" class="form-control" id="todoName" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="todoDesc">Description</label>
+    <input value="{{ todo.description }}"  name="description" type="text" class="form-control" id="todoDesc">
+  </div>
+  <button type="submit" class="btn btn-primary">Edit</button>
+</form>

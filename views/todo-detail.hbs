@@ -1,0 +1,10 @@
+
+ <div> {{todo.name}} </div>
+ <div> Description {{ todo.description }} </div>
+
+<a href="/todo/{{ todo._id }}/edit">
+<button type="submit" class="btn btn-primary">Edit</button>
+</a>
+<a href="/todo/{{ todo._id }}/delete">
+    <button type="submit" class="btn btn-primary">Delete</button>
+</a>

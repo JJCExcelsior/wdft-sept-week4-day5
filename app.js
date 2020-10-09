@@ -24,6 +24,8 @@ app.set('views', __dirname + '/views');
 // available throughout the app
 app.use(express.static(__dirname + '/public'))
 
+const bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({extended: true}))
 
 //Allows us to see detailed logs in the console
 app.use(logger('dev'));
@@ -33,9 +35,9 @@ app.use(logger('dev'));
 
 
 // Routes here
-app.get('/', (req, res) => {
-    res.render('landing.hbs')
-})
+
+const todoRoutes = require('./routes/Todo.routes')
+app.use('/', todoRoutes)
 
 
 //Start the server to begin listening on a port
